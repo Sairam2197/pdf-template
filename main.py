@@ -21,6 +21,7 @@ for index, row in csv_file.iterrows():
 
     """adding co-ordinates for underline - line under the text, since we have given the unit as mm
 we are giving the co-ordinates in mm pdf.line(x1, y1, x2,y2)"""
+
     #footer setting
     pdf.ln(265)
     pdf.set_font(family="Times", style="I", size=10)
@@ -39,4 +40,4 @@ we are giving the co-ordinates in mm pdf.line(x1, y1, x2,y2)"""
         for i in range(20, 298, 10):
             pdf.line(10, i, 200, i)
 
-pdf.output("output.pdf")
+pdf.output('output.pdf')
