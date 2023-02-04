@@ -11,8 +11,9 @@ for index, row in csv_file.iterrows():
     pdf.set_text_color(200, 50, 75)
     pdf.cell(w=0, h=12, txt=row["Topic"], ln=1, align="L")
     pdf.line(10, 21, 200, 21)
-"""adding co-ordinates for underline - line under the text, since we have given the unit as mm
+    """adding co-ordinates for underline - line under the text, since we have given the unit as mm
 we are giving the co-ordinates in mm pdf.line(x1, y1, x2,y2)"""
-
+    for i in range(row["Pages"] - 1):
+        pdf.add_page()
 
 pdf.output("output.pdf")
